@@ -41,6 +41,7 @@ int TotalWaterInContainers(vector<int>height, int n)
 
     return WaterTrapped;
 }
+
 int main(){
     vector<int>height = {4,2,0,6,3,2,5};
     int n = height.size();
