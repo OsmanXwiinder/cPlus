@@ -3,7 +3,7 @@ using namespace std;
 #include <vector>
 
 // JOD win
-
+ 
 int findIndex(vector<int>bits){
     int n = bits.size();
     cout << n << endl;
