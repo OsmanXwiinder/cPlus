@@ -63,13 +63,13 @@ Explanation: The only possible triplet does not sum up to 0.
 //     cout << endl;
 // } 
 
-void printSorted(vector<int> &trip){
-    int n = 3;
-    for(int i=0; i<n; i++){
-        cout << "This is Sorted array => " << trip[i] << " ";
-    }
-    cout << endl;
-}
+// void printSorted(vector<int> &trip){
+//     int n = 3;
+//     for(int i=0; i<n; i++){
+//         cout << trip[i] << " ";
+//     }
+//     cout << endl;
+// }
 
 void myswap(int *a, int *b){  // swapping using by own
     int temp = *a;
@@ -85,9 +85,10 @@ void mysort(vector<int> &trip){  // sorting using bubble sort my in built functi
             myswap(&trip[j],&trip[j+1]);
         }
     }
-    printSorted(trip);
+    // printSorted(trip);
 }
 
+    // 
 vector<vector<int>> tripletsValues2(vector<int> &nums, int n){
     vector<vector<int>> ans;
     set<vector<int>> s; // set<uniqueTriplets>
