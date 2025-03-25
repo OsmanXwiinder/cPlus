@@ -20,16 +20,22 @@ class Car{
          *mileage = *original.mileage; // address ye bhi   ye mileage kha point karega jha 
                                     // *original.mileage karega to actaul copy ho jaygi
     }
+    ~Car(){
+        cout << "Deleting Dynamic Memory...\n";
+        if(mileage != NULL){
+            delete mileage;
+            mileage = NULL;
+        }
+    }
 };
 
 int main(){
     Car c1("suzuki","black");
-
-    Car c2(c1);  
-    cout << "s2 name => " << c2.name << endl;
-    cout << "s2 color => " << c2.color << endl; 
-    cout << *c2.mileage << endl;
-    *c2.mileage = 10;
-    cout << *c1.mileage << endl; // koi change nhi abb 
+    Car c2(c1);
+    cout << c2.name << endl;
+    cout << c1.name << endl;
+    cout << c1.color << endl;
+    cout << *c1.mileage << endl;
+   
     return 0;
 } 
