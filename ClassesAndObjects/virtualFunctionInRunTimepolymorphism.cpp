@@ -12,17 +12,20 @@ class Prarent{
 };
 
 class Child : public Prarent{
-        :
-    string size;
+      public:
+      void print(){
+        cout << "hello ffrom child there" << endl;
+      }
     
-    string print(string s){
-        this->size = s;
-    }
+
 };
 
 int main(){
     Child child1;
-    child1. print("bada");
+    
+    Prarent *ptr;
+    ptr = &child1; // Run Time Binding
+    ptr->print();  // virtual Function
 
     return 0;
 }
