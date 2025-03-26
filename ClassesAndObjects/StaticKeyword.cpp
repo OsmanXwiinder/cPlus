@@ -15,14 +15,24 @@ class Example{
 
 int Example::x = 0;
 
-int main(){ 
-    Example eg1;
-    Example eg2;
-    Example eg3;
+class Osman{
+    public:
+    Osman(){
+        cout << "contructor..\n";
+    }
+    ~Osman(){
+        cout << "Destructor..\n";
+    }
 
-    cout << eg1.x++ << endl;
-    cout << eg2.x++ << endl;
-    cout << eg3.x++ << endl;
+};
+
+int main(){ 
+    int a = 0;
+    if(a==0){
+        static Osman os1;
+    }   
+
+    cout << "code ending..." << endl;
 
     return 0;
 }
