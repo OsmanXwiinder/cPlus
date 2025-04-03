@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 #include <vector>
-
+ 
+// merging 
 void merge(int arr[], int si, int ei, int mid){
     vector<int> temp;
     int i = si;
@@ -36,7 +37,7 @@ void merge(int arr[], int si, int ei, int mid){
     }
 
 }
-
+    //mergSort --
 void MergeSort(int arr[], int si, int ei){
 
     if(si >= ei){
@@ -51,7 +52,7 @@ void MergeSort(int arr[], int si, int ei){
     merge(arr, si, ei,mid);
 
 }
-
+        // printing
 void Print(int arr[],int n){
     for(int i=0; i<=n; i++){
         cout << arr[i] << " ";
