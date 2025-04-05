@@ -12,6 +12,14 @@ public:
         data = val;
         next = NULL;
     }
+    // dstructer 
+    ~Node(){
+        cout << "~Node" << data << endl;
+        if(next != NULL){
+            delete next;
+            next = NULL;
+        }
+    }
 };
 
 class List
@@ -25,6 +33,16 @@ public:
         head = NULL;
         tail = NULL;
     }
+
+    // destructer 
+    ~List(){
+        cout << "~List" << endl;
+        if(head != NULL){
+            delete head;
+            head = NULL;
+        }
+    }
+
     // push front function
     void push_front(int val)
     {
@@ -87,6 +105,7 @@ public:
         newnode->next = temp->next;
         temp->next = newnode;
     }
+
 };
 
 
@@ -94,18 +113,13 @@ public:
 int main()
 {
     List ll;
-    ll.push_front(6);
-    ll.push_front(5);
-    ll.push_front(4);
     ll.push_front(3);
     ll.push_front(2);
     ll.push_front(1);
 
     ll.print();
 
-    ll.push_back(5);
-    ll.push_back(4);
-    ll.push_back(3);
+    
     ll.push_back(2);
     ll.push_back(1);
 
