@@ -141,6 +141,21 @@ class List{
        return helper(head,key);
     }
 
+
+    // reversed a linked list 
+    void reversed(){
+        Node* curr = head;
+        Node* prev = NULL;
+
+        while(curr != NULL){
+            Node* next = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
 };
 
 
@@ -156,9 +171,9 @@ int main(){
     ll.print();
     cout << endl;
 
-    cout << ll.SearchKey(3) << endl; 
-
-    cout << ll.SearchRecursive(4) << endl;
+    ll.reversed();
+    ll.print();
+    
 
     return 0;
 }
