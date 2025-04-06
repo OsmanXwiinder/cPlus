@@ -119,6 +119,27 @@ class List{
         return -1;
     }
 
+    int helper(Node* temp, int key){
+        //base case 
+        if(temp == NULL){
+            return -1;
+        }
+
+        if(temp->data == key){
+            return 0;
+        }
+
+        int idx = helper(temp->next,key);
+        if(idx == -1){   // agar -1 to -1
+            return -1;
+        }
+        return idx+1;   // 0+1, 1+1, 2+1 => 3
+    }
+
+    // recursive search for key :
+    int SearchRecursive(int key){
+       return helper(head,key);
+    }
 
 };
 
@@ -136,6 +157,8 @@ int main(){
     cout << endl;
 
     cout << ll.SearchKey(3) << endl; 
+
+    cout << ll.SearchRecursive(4) << endl;
 
     return 0;
 }
