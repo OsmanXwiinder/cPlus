@@ -154,7 +154,30 @@ class List{
             curr = next;
         }
         head = prev;
+    } 
+
+    int size(){
+        int sz = 0;
+        Node* temp = head;
+        while(temp != NULL){
+            temp = temp->next;
+            sz++;
+        }
+        return sz;
     }
+
+    //Find & Remove Nth Node from End
+    void RemoveNthNode(int n){
+        Node* prev = head;
+        int Size = size();
+        for(int i=0; i<(Size-n); i++){
+            prev = prev->next;
+        }
+        Node* Todel = prev->next;
+        cout << "Deleting :" << Todel->data << endl;
+        prev->next = prev->next->next;
+    }
+
 
 };
 
@@ -171,7 +194,7 @@ int main(){
     ll.print();
     cout << endl;
 
-    ll.reversed();
+    ll.RemoveNthNode(3);
     ll.print();
     
 

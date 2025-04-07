@@ -31,10 +31,24 @@ class List{
         }
     }
 
+    // push_back 
+    void push_back(int val){
+        Node* newnode = new Node(val);
+        if(head == NULL){
+            head = tail = newnode;
+        }else{
+            tail->next = newnode;
+            tail = newnode; 
+        }   
+    }
+
     // print function 
     void print(){
         Node* temp = head;
-        
+        while(temp != NULL){
+            cout << temp->data << " -> " ;
+            temp = temp->next;
+        }
     }
 
 
