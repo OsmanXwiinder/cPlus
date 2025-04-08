@@ -98,7 +98,7 @@ class List{
         {
             temp = temp->next;           
         }
-        temp->next = NULL;
+        temp->next = NULL;  
         delete tail;
         tail = temp;
         
